@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="left">Left</div>
+	<div class="right">Right</div>
+	<div class="top">Top</div>
+	<div class="bottom">Bottom</div>
+</div>
+
+<style>
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-areas: "top top right" "left . right" "left bottom bottom";
+	grid-gap: 0.5em;
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+}
+
+.left {
+	background-color: var(--sr-annote-color-0);
+	grid-area: left;
+}
+
+.right {
+	background-color: var(--sr-annote-color-1);
+	grid-area: right;
+}
+
+.top {
+	background-color: var(--sr-annote-color-2);
+	grid-area: top;
+}
+
+.bottom {
+	background-color: var(--sr-annote-color-3);
+	grid-area: bottom;
+}
+
+</style>

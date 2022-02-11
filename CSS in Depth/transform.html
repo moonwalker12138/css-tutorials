@@ -1,0 +1,107 @@
+<nav class="main-nav">
+	<ul class="nav-links">
+		<li>
+			<a>
+				<img src="../images/pet1.jpeg" alt="home" class="nav-links_icon">
+				<span class="nav-links_label">Home</span>
+			</a>
+		</li>
+		<li>
+			<a>
+				<img src="../images/pet2.jpeg" alt="events" class="nav-links_icon">
+				<span class="nav-links_label">Events</span>
+			</a>
+		</li>
+		<li>
+			<a>
+				<img src="../images/pet3.jpeg" alt="members" class="nav-links_icon">
+				<span class="nav-links_label">Members</span>
+			</a>
+		</li>
+		<li>
+			<a>
+				<img src="../images/pet4.jpeg" alt="about" class="nav-links_icon">
+				<span class="nav-links_label">About</span>
+			</a>
+		</li>
+	</ul>
+</nav>
+
+
+<style>
+
+body {
+	color: white;
+	/* background-image: radial-gradient(hsl(200, 80%, 30%), hsl(210, 80%, 20%)); */
+}
+
+.main-nav {
+	position: fixed;
+	top: 8.25rem;
+	left: 0;
+	border-top-right-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	background-color: transparent;
+	transition: background-color .5s linear;
+}
+
+.main-nav:hover {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-links {
+	list-style-type: none;
+	display: block;
+	padding: .5em 1.5em;
+}
+
+.nav-links > li > a:hover {
+	color: hsl(40, 100%, 70%);
+}
+
+.nav-links_icon {
+	height: 1.5em;
+	width: 1.5em;
+	vertical-align: -0.2em;
+	filter: invert(100%);
+	transition: transform .2s ease-out;
+}
+
+.nav-links_label {
+	display: inline-block;
+	margin-left: 1em;
+	opacity: 0;
+	transform: translateX(-1em);
+	transition: transform .4s cubic-bezier(0.2, 0.9, 0.6, 1.3), opacity .4s linear;
+}
+
+.nav-links:hover .nav-links_label,
+.nav-links a:focus > .nav-links_label {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.nav-links > li:nth-child(2) .nav-links_label {
+	transition-delay: 0.1s;
+}
+
+.nav-links > li:nth-child(3) .nav-links_label {
+	transition-delay: 0.2s;
+}
+.nav-links > li:nth-child(4) .nav-links_label {
+	transition-delay: 0.3s;
+}
+.nav-links > li:nth-child(5) .nav-links_label {
+	transition-delay: 0.4s;
+}
+.nav-links > li + li {
+	margin-top: 1em;
+}
+
+.nav-links a:hover > .nav-links_icon,
+.nav-links a:focus > .nav-links_icon {
+	transform: scale(1.5);
+}
+
+
+</style>

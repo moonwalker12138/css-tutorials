@@ -1,0 +1,46 @@
+<nav>
+	<ul>
+		<li><a>C</a></li>
+		<li><a>C++</a></li>
+		<li><a>Java</a></li>
+		<li><a>Python</a></li>
+		<li><a>Javascript</a></li>
+	</ul>
+</nav>
+
+<style>
+
+nav {
+	width: 80%;
+	margin: 2em auto;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+@media (min-width: 600px) {
+	ul {
+		display: flex;
+	}
+}
+
+nav > ul > li {
+	border: 1px solid #ccc;
+}
+
+@media (min-width: 600px) {
+	nav > ul > li {
+		flex: 1 1 20%;
+	}
+}
+
+nav > ul > li > a {
+	display: block;
+	padding: .5em 1em;
+}
+
+
+</style>

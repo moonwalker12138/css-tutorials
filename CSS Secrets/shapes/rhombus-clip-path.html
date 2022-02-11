@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<style>
+			.rhombus {
+				max-width: 300px;
+				clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+				transition: 1s clip-path;
+			}
+
+			.rhombus:hover {
+				clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+			}
+
+			.largeText {
+				font-size: 100px;
+				height: 200px;
+				width: 200px;
+				line-height: 200px;
+				text-align: center;
+				background-color: lightskyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<img class="rhombus" src="../../images/dog.png" alt="dog">
+		<div class="rhombus largeText">1</div>
+	</body>
+</html>

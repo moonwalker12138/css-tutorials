@@ -1,0 +1,59 @@
+<!-- `linear-gradient` solution -->
+<style>
+	.cut-corner-linear {
+		width: 300px;
+		padding: .5em 1em;
+		background: linear-gradient(-45deg, transparent 15px, lightskyblue 0) right, linear-gradient(45deg, transparent 15px, lightseagreen 0) left;
+		background-size: 50% 100%;
+		background-repeat: no-repeat;
+	}
+</style>
+<div class="cut-corner-linear">
+	Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis doloremque suscipit ipsa! Suscipit deleniti, atque facere commodi error numquam assumenda.
+</div>
+
+<hr>
+
+<!-- `radial-gradient` solution -->
+<style>
+	.cut-corner-radial {
+		width: 300px;
+		padding: .5em 1em;
+		background: radial-gradient(circle at right bottom, transparent 15px, #87cefa 0) right, radial-gradient(circle at left bottom, transparent 15px, lightseagreen 0) left;
+		background-size: 50% 100%;
+		background-repeat: no-repeat;
+	}
+</style>
+<div class="cut-corner-radial">
+	Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam atque unde facilis iusto eveniet temporibus, natus placeat dolorum culpa numquam.
+</div>
+
+<hr>
+
+<!-- svg + `border-image` solution -->
+<style>
+	.cut-corner-svg {
+		width: 300px;
+		padding: .5em 1em;
+		border: 15px solid transparent;
+		border-image: 1 fill url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" fill="%2358a"> <polygon points="0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2" /> </svg>');
+	}
+</style>
+<div class="cut-corner-svg">
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis a at quo explicabo, optio fugiat obcaecati magnam maxime laborum omnis!
+</div>
+
+<hr>
+
+<!-- `clip-path` solution -->
+<style>
+	.cut-corner-clip-path {
+		width: 300px;
+		padding: .5em 1em;
+		background-color: lightskyblue;
+		clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
+	}
+</style>
+<div class="cut-corner-clip-path">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam aspernatur consectetur omnis impedit culpa est, ratione non expedita veritatis similique.
+</div>

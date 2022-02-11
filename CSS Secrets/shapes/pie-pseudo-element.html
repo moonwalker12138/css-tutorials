@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<style>
+			.pie {
+				position: relative;
+				width: 100px;
+				line-height: 100px;
+				border-radius: 50%;
+				background-color: yellowgreen;
+				background-image: linear-gradient(to right, transparent 50%, #655 50%);
+				color: transparent;
+				text-align: center;
+			}
+
+			.pie::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin-left: 50%;
+				width: 50%;
+				height: 100%;
+				/* border: 5px solid; box-sizing: border-box; */
+				border-radius: 0 100% 100% 0 / 50%;
+				background-color: inherit;
+				transform-origin: left;
+				animation: spin 50s linear infinite, bg 100s step-end infinite;
+				animation-play-state: paused;
+				animation-delay: inherit;
+			}
+
+			@keyframes spin {
+				to {transform: rotate(.5turn);}
+			}
+
+			@keyframes bg {
+				50% {background-color: #655;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="pie">80%</div>
+		<div class="pie">20%</div>
+		<script type="text/javascript">
+			Array.from(document.getElementsByClassName('pie')).forEach((pie) => {
+				var p = parseFloat(pie.textContent);
+				pie.style.animationDelay = '-' + p + 's';
+			});
+		</script>
+	</body>
+</html>
